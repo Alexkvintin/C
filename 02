@@ -1,41 +1,43 @@
 #include <fstream>
 #include <iostream>
 #include <cstring>
+#include <string>
 using namespace std;
 
 int main()
-{
+{ 
     ofstream fout;
     fout.open("myfile.txt", ofstream::app);
     if(!fout.is_open())
     {
-        cout << "ошибка открытия файла!" << endl;
+        cout << "ошибка открытия файла !" << endl;
     }
     else
     {
-        cout << "введите данные" << endl;
-        char a[100];
-        cin << a;
-        fout << a;
+        cout << "введите данные:" << endl;
+        char a[30];
+		cin >> a; 
+		fout << "\n" << a;
     }
     fout.close();
-    
+    return 0;
+}
+int f()
+{
     ifstream fin;
-    fin.open("myfile.txt")
-    if (!fin.open())
+    fin.open("myfile.txt");
+     if (!fin.is_open())
     {
-        cout << "ошибка открытия файла!" << endl;
+     	cout << "ошибка открытия файла !";
     }
-    else
-    {
-        char c;
-        while (fin.get(c))
-        {
-          cout << c;  
-        }
-    }
-    cout << "количество символов в файле = " << strlen(c) << endl;
-    
-    fit.close();
+     else
+     {
+     	char c;
+     	while (fin.get(c))
+		 {
+		 	cout << c;
+		 }
+     }
+    fin.close();
     return 0;
 }
