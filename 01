@@ -8,8 +8,9 @@ int main()
     char a[100];
     cout << "введите строку:" << endl;
     cin >> a;
-    string cmd = "quit";
-    if (a != cmd)
+    string d = "quit";
+    string b = "выход";
+    if (a != d && a != b)
     {
      cout << "Количество символов в строке = "<< strlen(a) << endl;
     }
